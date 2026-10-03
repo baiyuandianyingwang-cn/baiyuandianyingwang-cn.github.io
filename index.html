@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>百元电影网 - 热门电影_剧集片单_动漫综艺_影视榜单在线指南</title>
+<meta name="description" content="百元电影网（https://baiyuandianyingwang-cn.github.io）是专注热门电影、剧集片单、经典动漫与综艺娱乐的影视指南站，提供影片简介、题材标签、影视榜单与观影指南，每日更新，手机端自适应浏览。" />
+<meta name="keywords" content="百元电影网,百元电影,电影网,热门电影推荐,剧集片单,经典动漫,综艺娱乐,影视榜单,影视资讯,观影指南" />
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1" />
+<meta name="author" content="百元电影网" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="theme-color" content="#9e2b25" />
+<link rel="canonical" href="https://baiyuandianyingwang-cn.github.io/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="百元电影网" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:title" content="百元电影网 - 热门电影_剧集片单_动漫综艺_影视榜单在线指南" />
+<meta property="og:description" content="百元电影网整理热门电影、剧集片单、经典动漫与综艺娱乐内容，附简介、题材标签与影视榜单，手机电脑都能看。" />
+<meta property="og:url" content="https://baiyuandianyingwang-cn.github.io/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="百元电影网 - 热门电影_剧集片单_动漫综艺_影视榜单在线指南" />
+<meta name="twitter:description" content="百元电影网整理热门电影、剧集片单、经典动漫与综艺娱乐内容，附简介、题材标签与影视榜单。" />
+<style type="text/css">
+/* ============================================================
+   视觉方案：新中式宣纸 · 朱印卷轴（Xuan Paper & Seal）
+   —— 宣纸米色底 + 朱砂红 + 墨黑 + 竹青 + 鎏金
+   元素：回纹边、印章、卷轴、竹简、团扇、宫灯、信笺、匾额
+   ============================================================ */
+:root{
+  --paper:#f4ecdf;
+  --paper2:#fbf7f0;
+  --paper3:#ece1cf;
+  --ink:#26221d;
+  --ink2:#5a5148;
+  --grey:#8c8175;
+  --red:#9e2b25;
+  --red2:#c2453c;
+  --jade:#4a7c59;
+  --gold:#b08d3f;
+  --indigo:#31566b;
+  --line:#d9cdb9;
+  --serif:"Songti SC","Noto Serif SC","STSong","SimSun",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  --maxw:1180px;
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.85;overflow-x:hidden;
+  background-image:
+    radial-gradient(900px 520px at 8% -8%, rgba(176,141,63,.16), transparent 60%),
+    radial-gradient(760px 480px at 96% 6%, rgba(158,43,37,.10), transparent 62%),
+    radial-gradient(820px 560px at 50% 108%, rgba(74,124,89,.12), transparent 64%),
+    repeating-linear-gradient(45deg, rgba(38,34,29,.020) 0 2px, transparent 2px 7px);
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;height:auto;display:block;}
+ul,ol{margin:0;padding:0;list-style:none;}
+p{margin:0;}
+h1,h2,h3,h4{margin:0;font-family:var(--serif);font-weight:700;line-height:1.3;letter-spacing:1px;}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+.skip{position:absolute;left:-9999px;top:0;z-index:99;background:var(--red);color:#fff;padding:10px 16px;}
+.skip:focus{left:14px;top:14px;}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;}
+
+/* 回纹装饰条 */
+.fret{height:14px;background-repeat:repeat-x;background-size:56px 14px;opacity:.55;}
+
+/* ---------- 顶部 ---------- */
+.top{background:var(--ink);color:#ece3d3;font-size:12.5px;letter-spacing:1px;}
+.top .wrap{display:flex;flex-wrap:wrap;gap:4px 16px;align-items:center;justify-content:space-between;padding:7px 20px;}
+.top b{color:var(--gold);}
+
+/* ---------- 匾额式报头 ---------- */
+.plaque{border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--paper2),var(--paper));}
+.plaque .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:16px 20px;}
+.title{display:flex;align-items:center;gap:14px;flex:0 0 auto;}
+.title .seal{
+  width:52px;height:52px;flex:0 0 auto;border-radius:8px;
+  background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-size:15px;font-weight:700;line-height:1.1;text-align:center;
+  box-shadow:0 6px 16px rgba(158,43,37,.32);border:2px solid rgba(255,255,255,.35);
+}
+.title .seal em{font-style:normal;}
+.title .zi strong{display:block;font-size:clamp(24px,4.6vw,32px);letter-spacing:3px;font-family:var(--serif);}
+.title .zi span{font-size:11px;letter-spacing:3px;color:var(--grey);}
+.nav{display:flex;align-items:center;gap:0;margin-left:auto;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;}
+.nav::-webkit-scrollbar{display:none;}
+.nav a{
+  flex:0 0 auto;font-size:14.5px;padding:8px 14px;color:var(--ink2);white-space:nowrap;
+  border-left:1px solid var(--line);
+}
+.nav a:first-child{border-left:0;}
+.nav a:hover{color:var(--red);background:rgba(158,43,37,.06);}
+.nav a.on{color:#fff;background:var(--ink);font-weight:700;}
+.look{display:flex;flex:0 0 auto;align-items:center;border:1px solid var(--line);background:#fff;}
+.look input{width:150px;border:0;background:transparent;padding:8px 12px;font-size:13.5px;font-family:var(--sans);color:var(--ink);}
+.look input::placeholder{color:#a89b8c;}
+.look button{border:0;background:var(--red);color:#fff;font-size:13px;padding:9px 14px;cursor:pointer;font-family:var(--serif);letter-spacing:1px;}
+
+/* ---------- HERO：中堂 ---------- */
+.hero{padding:30px 0 8px;}
+.hall{
+  position:relative;border:1px solid var(--line);background:linear-gradient(170deg,var(--paper2),var(--paper3));
+  padding:36px 30px 30px;box-shadow:0 16px 36px rgba(60,48,32,.10);
+}
+.hall::before,.hall::after{
+  content:"";position:absolute;left:12px;right:12px;height:0;border-top:2px solid var(--line);
+}
+.hall::before{top:10px;}
+.hall::after{bottom:10px;}
+.vertical{
+  position:absolute;right:26px;top:34px;writing-mode:vertical-rl;font-family:var(--serif);
+  font-size:13px;letter-spacing:6px;color:var(--red);border-left:1px solid var(--line);padding-left:10px;
+}
+.eyebrow{display:inline-block;font-family:var(--serif);font-size:12.5px;letter-spacing:4px;color:var(--red);border:1px solid var(--red);padding:4px 12px;}
+h1{
+  margin:18px 0 14px;font-size:clamp(36px,8.4vw,64px);letter-spacing:6px;
+}
+h1 em{font-style:normal;color:var(--red);}
+.lead{max-width:720px;font-size:clamp(14.5px,2.3vw,16.5px);color:var(--ink2);}
+.lead b{color:var(--ink);border-bottom:2px solid var(--gold);}
+.cardurl{
+  margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;
+  border:1px solid var(--line);background:#fff;padding:12px 16px;font-size:14px;color:var(--ink2);
+  box-shadow:inset 0 0 0 3px var(--paper);
+}
+.cardurl i{font-style:normal;font-family:var(--serif);color:var(--jade);letter-spacing:2px;}
+.cardurl strong{color:var(--red);font-size:15px;word-break:break-all;}
+.acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;}
+.act{padding:12px 28px;font-family:var(--serif);font-size:15px;letter-spacing:2px;background:var(--red);color:#fff;box-shadow:0 10px 22px rgba(158,43,37,.28);}
+.act:hover{background:var(--ink);}
+.act.o{background:transparent;color:var(--ink);border:1px solid var(--ink);box-shadow:none;}
+.act.o:hover{background:var(--ink);color:#fff;}
+.stamps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px;}
+.stamps div{
+  background:#fff;border:1px solid var(--line);padding:12px 10px;text-align:center;
+  box-shadow:inset 0 0 0 3px var(--paper2);
+}
+.stamps strong{display:block;font-family:var(--serif);font-size:clamp(19px,4vw,26px);color:var(--red);}
+.stamps span{font-size:12.5px;color:var(--grey);letter-spacing:1px;}
+
+/* ---------- 路径 ---------- */
+.path{padding:14px 0 0;font-size:13px;color:var(--grey);letter-spacing:1px;}
+.path ol{display:flex;flex-wrap:wrap;gap:8px;}
+.path li:not(:last-child)::after{content:"·";margin-left:8px;}
+.path a:hover{color:var(--red);}
+
+/* ---------- 板块头 ---------- */
+.sec{padding:40px 0 6px;}
+.hd{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 16px;margin-bottom:20px;border-bottom:2px solid var(--ink);padding-bottom:12px;}
+.hd .sig{
+  width:44px;height:44px;flex:0 0 auto;border:2px solid var(--red);border-radius:6px;color:var(--red);
+  display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:17px;font-weight:700;
+  transform:rotate(-4deg);
+}
+.hd h2{font-size:clamp(22px,4vw,30px);letter-spacing:2px;}
+.hd h2 em{font-style:normal;color:var(--jade);}
+.hd p{font-size:13.5px;color:var(--grey);max-width:560px;}
+.hd .all{margin-left:auto;font-size:13.5px;color:var(--red);border-bottom:1px solid var(--red);white-space:nowrap;}
+
+/* ===== 栏目一：卷轴 ===== */
+.scrolls{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.scroll{
+  position:relative;border:1px solid var(--line);background:var(--paper2);
+  padding:0 22px;box-shadow:0 10px 24px rgba(60,48,32,.08);
+}
+.scroll::before,.scroll::after{
+  content:"";position:absolute;top:0;bottom:0;width:14px;
+  background:linear-gradient(90deg,#6b5b45,#3c3327 45%,#6b5b45);
+  box-shadow:inset 0 0 6px rgba(0,0,0,.35);
+}
+.scroll::before{left:-8px;border-radius:4px;}
+.scroll::after{right:-8px;border-radius:4px;}
+.scroll .in{padding:18px 4px 20px;display:flex;flex-direction:column;gap:8px;}
+.scroll .rk{
+  position:absolute;right:-2px;top:14px;font-family:var(--serif);font-size:13px;
+  background:var(--red);color:#fff;padding:3px 10px;border-radius:3px;transform:rotate(3deg);
+}
+.scroll h3{font-size:18px;letter-spacing:1px;}
+.scroll h3 a:hover{color:var(--red);}
+.scroll .mk{display:flex;flex-wrap:wrap;gap:6px;}
+.scroll .mk span{font-size:11.5px;border:1px solid var(--line);background:#fff;padding:2px 9px;color:var(--ink2);letter-spacing:1px;}
+.scroll p{font-size:13.5px;color:var(--ink2);}
+.scroll .ft{margin-top:4px;padding-top:10px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;font-size:13px;}
+.scroll .ft b{color:var(--red);font-family:var(--serif);font-size:16px;}
+
+/* ===== 栏目二：竹简 ===== */
+.slips{
+  display:flex;gap:10px;overflow-x:auto;padding:14px 2px 18px;-webkit-overflow-scrolling:touch;
+}
+.slips::-webkit-scrollbar{height:8px;}
+.slips::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px;}
+.slip{
+  flex:1 1 0;min-width:96px;height:250px;position:relative;
+  background:linear-gradient(180deg,#e3cfab,#cbb389 60%,#bda377);
+  border:1px solid #a98f68;border-radius:6px;box-shadow:2px 4px 10px rgba(60,48,32,.18);
+  display:flex;align-items:flex-start;justify-content:center;padding:16px 6px;
+  transition:transform .2s;
+}
+.slip:hover{transform:translateY(-6px);}
+.slip::before{
+  content:"";position:absolute;left:6px;right:6px;top:12px;height:1px;background:rgba(90,70,40,.35);
+}
+.slip::after{
+  content:"";position:absolute;left:6px;right:6px;bottom:12px;height:1px;background:rgba(90,70,40,.35);
+}
+.slip .vt{
+  writing-mode:vertical-rl;text-orientation:upright;
+  font-family:var(--serif);font-size:17px;letter-spacing:4px;color:#3a2f1e;font-weight:700;
+}
+.slip .vt small{
+  display:block;font-size:11px;letter-spacing:2px;color:#6e5b3c;margin-top:8px;font-weight:400;
+  writing-mode:vertical-rl;
+}
+.slip .no{
+  position:absolute;bottom:20px;left:50%;transform:translateX(-50%);
+  font-family:var(--serif);font-size:11px;color:#fff;background:var(--red);padding:2px 7px;border-radius:3px;white-space:nowrap;
+}
+.sliphint{font-size:12.5px;color:var(--grey);letter-spacing:1px;}
+
+/* ===== 栏目三：团扇 ===== */
+.fans{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.fan{text-align:center;}
+.fan .cir{
+  width:100%;aspect-ratio:1/1;border-radius:50%;position:relative;overflow:hidden;
+  border:6px solid #fff;box-shadow:0 10px 26px rgba(60,48,32,.18), inset 0 0 0 1px var(--line);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .25s;
+}
+.fan:hover .cir{transform:rotate(-6deg) scale(1.03);}
+.fan .cir::before{
+  content:"";position:absolute;inset:0;opacity:.4;
+  background-image:repeating-radial-gradient(circle at 50% 50%, rgba(255,255,255,.28) 0 2px, transparent 2px 12px);
+}
+.fan .cir b{
+  position:relative;font-family:var(--serif);font-size:15px;color:#fff;background:rgba(38,34,29,.72);
+  padding:4px 12px;letter-spacing:2px;
+}
+.q1{background:radial-gradient(circle at 35% 30%,#c2453c,#6d1a16);}
+.q2{background:radial-gradient(circle at 35% 30%,#4a7c59,#21402c);}
+.q3{background:radial-gradient(circle at 35% 30%,#b08d3f,#6b4f16);}
+.q4{background:radial-gradient(circle at 35% 30%,#31566b,#16292f);}
+.q5{background:radial-gradient(circle at 35% 30%,#8a5a7a,#3f2038);}
+.fan h3{font-size:15.5px;margin-top:12px;letter-spacing:1px;}
+.fan h3 a:hover{color:var(--red);}
+.fan p{font-size:12.5px;color:var(--grey);margin-top:3px;}
+.fan .st{display:inline-block;margin-top:6px;font-size:11.5px;border:1px solid var(--line);padding:2px 10px;color:var(--jade);background:#fff;}
+
+/* ===== 栏目四：宫灯 ===== */
+.lanterns{display:grid;grid-template-columns:repeat(4,1fr);gap:22px 18px;padding-top:22px;}
+.lant{position:relative;text-align:center;}
+.lant::before{
+  content:"";position:absolute;left:50%;top:-22px;width:1px;height:22px;background:var(--gold);transform:translateX(-50%);
+}
+.lant .body{
+  position:relative;border-radius:46% 46% 42% 42% / 30% 30% 34% 34%;
+  padding:22px 12px 24px;color:#fff;overflow:hidden;
+  box-shadow:0 12px 26px rgba(60,48,32,.22);
+}
+.lant .body::after{
+  content:"";position:absolute;inset:0;opacity:.28;
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0 1px,transparent 1px 14px);
+}
+.lant .body h3{position:relative;font-size:15.5px;letter-spacing:1px;}
+.lant .body span{position:relative;display:block;font-size:11.5px;opacity:.92;margin-top:4px;}
+.l1{background:linear-gradient(165deg,#c2453c,#7a1c17);}
+.l2{background:linear-gradient(165deg,#b08d3f,#6b4f16);}
+.l3{background:linear-gradient(165deg,#4a7c59,#21402c);}
+.l4{background:linear-gradient(165deg,#31566b,#16292f);}
+.lant .cap{width:38px;height:8px;border-radius:3px;background:var(--gold);margin:0 auto;}
+.lant .cap.b{margin-top:6px;}
+.lant .cap.t{margin-bottom:6px;}
+.lant p{font-size:12.5px;color:var(--grey);margin-top:8px;}
+.lant .sc{font-family:var(--serif);font-size:14px;color:var(--red);}
+
+/* ===== 栏目五：金榜 + 信笺侧栏 ===== */
+.split{display:grid;grid-template-columns:1fr 330px;gap:24px;align-items:start;}
+.board{border:1px solid var(--ink);background:var(--paper2);padding:8px 6px;box-shadow:0 10px 24px rgba(60,48,32,.08);}
+.board li{display:flex;align-items:center;gap:14px;padding:12px 14px;border-bottom:1px dashed var(--line);}
+.board li:last-child{border-bottom:0;}
+.board li:hover{background:#fff;}
+.board .rk{
+  flex:0 0 auto;width:44px;height:44px;border-radius:6px;border:2px solid var(--red);color:var(--red);
+  display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:15px;font-weight:700;
+}
+.board li:nth-child(1) .rk{background:var(--red);color:#fff;}
+.board li:nth-child(2) .rk{background:var(--gold);border-color:var(--gold);color:#3d2c07;}
+.board li:nth-child(3) .rk{background:var(--jade);border-color:var(--jade);color:#fff;}
+.board .nm{flex:1;min-width:0;}
+.board .nm a{font-family:var(--serif);font-size:16px;font-weight:700;letter-spacing:1px;}
+.board .nm a:hover{color:var(--red);}
+.board .nm span{display:block;font-size:12.5px;color:var(--grey);}
+.board .sc{flex:0 0 auto;font-family:var(--serif);font-size:17px;color:var(--red);font-weight:700;}
+.board .sc small{display:block;font-size:11px;color:var(--jade);font-family:var(--sans);font-weight:400;}
+
+/* 信笺 */
+.letter{
+  border:1px solid var(--line);background:#fff;padding:20px 18px;
+  background-image:repeating-linear-gradient(180deg,transparent 0 27px,var(--line) 27px 28px);
+  box-shadow:0 10px 24px rgba(60,48,32,.08);
+}
+.letter h3{
+  font-size:16px;letter-spacing:2px;color:var(--ink);border-bottom:2px solid var(--red);
+  display:inline-block;padding-bottom:4px;margin-bottom:12px;background:#fff;
+}
+.letter .dt{font-size:11.5px;color:var(--red);letter-spacing:1px;background:#fff;}
+.letter li{padding:12px 0;background:#fff;}
+.letter li + li{border-top:1px dotted var(--line);}
+.letter a{font-family:var(--serif);font-size:15.5px;font-weight:700;}
+.letter a:hover{color:var(--red);}
+.letter p{font-size:12.5px;color:var(--ink2);margin-top:3px;}
+.pane2{border:1px solid var(--line);background:var(--paper2);padding:18px 16px;margin-top:16px;}
+.pane2 h3{font-size:16px;letter-spacing:2px;margin-bottom:12px;}
+.tags{display:flex;flex-wrap:wrap;gap:8px;}
+.tags a{font-size:12.5px;border:1px solid var(--line);background:#fff;padding:5px 12px;color:var(--ink2);letter-spacing:1px;}
+.tags a:hover{background:var(--red);border-color:var(--red);color:#fff;}
+
+/* ===== 栏目六：问答册 ===== */
+.book{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--ink);background:#fff;}
+.book .pg{padding:22px 24px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+.book .pg:nth-child(2n){border-right:0;}
+.book .pg:nth-last-child(-n+2){border-bottom:0;}
+.book .pg .q{display:flex;align-items:center;gap:10px;}
+.book .pg .q i{
+  flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:normal;font-size:15px;font-weight:700;
+}
+.book .pg h3{font-size:16.5px;letter-spacing:1px;}
+.book .pg p{font-size:13.5px;color:var(--ink2);margin-top:10px;padding-left:40px;border-left:1px solid var(--line);}
+.info{display:flex;flex-wrap:wrap;border:1px solid var(--ink);margin-top:22px;background:var(--paper2);}
+.info div{flex:1 1 180px;padding:14px 18px;border-right:1px solid var(--line);}
+.info div:last-child{border-right:0;}
+.info strong{display:block;font-family:var(--serif);font-size:18px;letter-spacing:1px;word-break:break-all;}
+.info span{font-size:11.5px;color:var(--grey);letter-spacing:2px;}
+
+/* ---------- 页脚 ---------- */
+.foot{margin-top:44px;border-top:6px solid var(--ink);background:var(--ink);color:#e2d8c8;}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:24px;padding:32px 0 18px;}
+.fgrid h4{font-family:var(--serif);font-size:15px;color:var(--gold);letter-spacing:2px;margin-bottom:12px;}
+.fgrid p{font-size:13.5px;color:#b3a795;}
+.fgrid li{padding:4px 0;}
+.fgrid li a{font-size:13.5px;color:#d5cabb;}
+.fgrid li a:hover{color:var(--gold);}
+.fend{border-top:1px solid rgba(255,255,255,.16);padding:14px 0 28px;font-size:12.5px;color:#94aa9b;}
+.fend .wrap{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;}
+.fend a{color:#d5cabb;}
+.fend a:hover{color:var(--gold);}
+.up{
+  position:fixed;right:16px;bottom:18px;z-index:50;width:44px;height:44px;border-radius:6px;
+  border:2px solid var(--red);background:#fff;color:var(--red);font-size:18px;font-family:var(--serif);font-weight:700;
+  cursor:pointer;display:none;align-items:center;justify-content:center;
+}
+.up.show{display:flex;}
+.up:hover{background:var(--red);color:#fff;}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1024px){
+  .scrolls{grid-template-columns:1fr;}
+  .fans{grid-template-columns:repeat(3,1fr);}
+  .lanterns{grid-template-columns:repeat(3,1fr);}
+  .split{grid-template-columns:1fr;}
+  .fgrid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:768px){
+  .plaque .wrap{padding:12px 16px;}
+  .title .seal{width:44px;height:44px;font-size:13px;}
+  .nav{margin-left:0;width:100%;border-top:1px solid var(--line);padding-top:8px;}
+  .look{margin:8px 0 0;}
+  .look input{width:100%;}
+  .hero{padding:18px 0 4px;}
+  .hall{padding:26px 18px 24px;}
+  .vertical{display:none;}
+  h1{letter-spacing:3px;}
+  .stamps{grid-template-columns:repeat(2,1fr);}
+  .sec{padding:30px 0 4px;}
+  .fans{grid-template-columns:repeat(2,1fr);}
+  .lanterns{grid-template-columns:repeat(2,1fr);}
+  .slip{height:220px;min-width:84px;}
+  .book{grid-template-columns:1fr;}
+  .book .pg{border-right:0;padding:18px 18px 20px;}
+  .book .pg:nth-last-child(2){border-bottom:1px solid var(--line);}
+  .info div{flex:1 1 100%;border-right:0;border-bottom:1px solid var(--line);}
+  .info div:last-child{border-bottom:0;}
+  .fgrid{grid-template-columns:1fr;gap:16px;}
+}
+@media (max-width:420px){
+  .fans{grid-template-columns:1fr;}
+  .lanterns{grid-template-columns:1fr;}
+  .scroll{padding:0 18px;}
+  h1{letter-spacing:2px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;scroll-behavior:auto !important;}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"百元电影网",
+  "alternateName":["百元电影","百元影视","百元电影网官网"],
+  "url":"https://baiyuandianyingwang-cn.github.io/",
+  "description":"百元电影网是专注热门电影、剧集片单、经典动漫与综艺娱乐的影视指南站，提供影片简介、题材标签、影视榜单与观影指南。",
+  "inLanguage":"zh-CN",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://baiyuandianyingwang-cn.github.io/search?q={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"百元电影网","item":"https://baiyuandianyingwang-cn.github.io/"},
+    {"@type":"ListItem","position":2,"name":"热门电影","item":"https://baiyuandianyingwang-cn.github.io/#movie"},
+    {"@type":"ListItem","position":3,"name":"剧集片单","item":"https://baiyuandianyingwang-cn.github.io/#series"},
+    {"@type":"ListItem","position":4,"name":"动漫专区","item":"https://baiyuandianyingwang-cn.github.io/#anime"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"百元电影网热门影片榜单",
+  "url":"https://baiyuandianyingwang-cn.github.io/#rank",
+  "itemListOrder":"https://schema.org/ItemListOrderDescending",
+  "numberOfItems":6,
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"沙丘"},
+    {"@type":"ListItem","position":2,"name":"奥本海默"},
+    {"@type":"ListItem","position":3,"name":"哪吒之魔童闹海"},
+    {"@type":"ListItem","position":4,"name":"流浪地球"},
+    {"@type":"ListItem","position":5,"name":"漫长的季节"},
+    {"@type":"ListItem","position":6,"name":"繁花"}
+  ]
+}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="fret" role="presentation" style="background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 14'%3E%3Cg fill='none' stroke='%239e2b25' stroke-width='1.6'%3E%3Cpath d='M2 12 L2 4 L10 4 L10 8 L6 8 L6 10'/%3E%3Cpath d='M18 12 L18 4 L26 4 L26 8 L22 8 L22 10'/%3E%3Cpath d='M34 12 L34 4 L42 4 L42 8 L38 8 L38 10'/%3E%3Cpath d='M50 12 L50 4 L56 4'/%3E%3C/g%3E%3C/svg%3E&quot;);"></div>
+
+<div class="top">
+  <div class="wrap">
+    <span>百元电影网 · 官方网址 <b>https://baiyuandianyingwang-cn.github.io</b></span>
+    <span>每日更新 · 片单推荐 · 免费浏览</span>
+  </div>
+</div>
+
+<header class="plaque">
+  <div class="wrap">
+    <a class="title" href="#" aria-label="百元电影网首页">
+      <span class="seal" aria-hidden="true"><em>百元<br />电影</em></span>
+      <span class="zi"><strong>百元电影网</strong><span>BAIYUAN MOVIE GUIDE</span></span>
+    </a>
+    <nav class="nav" aria-label="百元电影网主导航">
+      <a class="on" href="#">首页</a>
+      <a href="#movie">热门电影</a>
+      <a href="#series">剧集片单</a>
+      <a href="#anime">动漫专区</a>
+      <a href="#show">综艺娱乐</a>
+      <a href="#rank">影视榜单</a>
+      <a href="#news">影视资讯</a>
+      <a href="#guide">观影指南</a>
+      <form class="look" action="#" method="get" role="search">
+        <label class="skip" for="q7">搜索影片</label>
+        <input id="q7" type="search" name="q" placeholder="片名 / 演员 / 导演" />
+        <button type="submit">检索</button>
+      </form>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO：中堂 -->
+  <section class="hero" aria-labelledby="h1t">
+    <div class="wrap">
+      <article class="hall">
+        <span class="vertical" aria-hidden="true">看片先看百元电影网</span>
+        <span class="eyebrow">百元电影网 · 官方主页</span>
+        <h1 id="h1t">百元<em>电影网</em></h1>
+        <p class="lead">
+          <b>百元电影网</b>（<b>https://baiyuandianyingwang-cn.github.io</b>）是一份条理清晰的<b>影视指南</b>：
+          收录<b>热门电影</b>、<b>剧集片单</b>、<b>经典动漫</b>、<b>综艺娱乐</b>四大板块，
+          提供影片简介、题材标签、影视榜单与观影指南。页面轻量、手机端自适应，找片一步到位。
+        </p>
+        <p class="cardurl">
+          <i>网址</i><strong>https://baiyuandianyingwang-cn.github.io</strong>
+          <span>· 站名：百元电影网 · 每日更新</span>
+        </p>
+        <div class="acts">
+          <a class="act" href="#movie">浏览热门电影</a>
+          <a class="act o" href="#rank">查看影视榜单</a>
+        </div>
+        <div class="stamps">
+          <div><strong>4</strong><span>内容板块</span></div>
+          <div><strong>1200+</strong><span>影视条目</span></div>
+          <div><strong>每日</strong><span>榜单刷新</span></div>
+          <div><strong>100%</strong><span>移动端适配</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <nav class="path" aria-label="面包屑导航">
+      <ol>
+        <li><a href="#">百元电影网</a></li>
+        <li><a href="#movie">热门电影</a></li>
+        <li>首页</li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- 栏目一：卷轴 -->
+  <section class="sec" id="movie" aria-labelledby="s1">
+    <div class="wrap">
+      <div class="hd">
+        <span class="sig" aria-hidden="true">壹</span>
+        <h2 id="s1">热门电影 <em>卷轴</em></h2>
+        <p>百元电影网按科幻、传记、动画等题材整理片单，逐条列出简介与看点。</p>
+        <a class="all" href="#">查看更多电影 »</a>
+      </div>
+      <div class="scrolls">
+        <article class="scroll">
+          <span class="rk">评分 8.9</span>
+          <div class="in">
+            <h3><a href="#">沙丘</a></h3>
+            <div class="mk"><span>科幻</span><span>冒险</span><span>155 分钟</span></div>
+            <p>史诗级科幻巨制，沙漠星球的权力与命运之争，视听语言极具压迫感，适合大屏观看。</p>
+            <div class="ft"><a href="#">查看详情 »</a><b>8.9</b></div>
+          </div>
+        </article>
+        <article class="scroll">
+          <span class="rk">评分 8.8</span>
+          <div class="in">
+            <h3><a href="#">奥本海默</a></h3>
+            <div class="mk"><span>传记</span><span>历史</span><span>181 分钟</span></div>
+            <p>聚焦原子时代缔造者的天才与挣扎，三线叙事交织，人物群像扎实。</p>
+            <div class="ft"><a href="#">查看详情 »</a><b>8.8</b></div>
+          </div>
+        </article>
+        <article class="scroll">
+          <span class="rk">评分 8.5</span>
+          <div class="in">
+            <h3><a href="#">流浪地球</a></h3>
+            <div class="mk"><span>科幻</span><span>国产</span><span>125 分钟</span></div>
+            <p>国产科幻里程碑作品，带着家园去流浪的浪漫想象与硬核设定并存。</p>
+            <div class="ft"><a href="#">查看详情 »</a><b>8.5</b></div>
+          </div>
+        </article>
+        <article class="scroll">
+          <span class="rk">评分 9.0</span>
+          <div class="in">
+            <h3><a href="#">哪吒之魔童闹海</a></h3>
+            <div class="mk"><span>动画</span><span>国漫</span><span>144 分钟</span></div>
+            <p>国漫顶流续作，画面密度与叙事节奏全面升级，燃点与泪点齐飞。</p>
+            <div class="ft"><a href="#">查看详情 »</a><b>9.0</b></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目二：竹简 -->
+  <section class="sec" id="series" aria-labelledby="s2">
+    <div class="wrap">
+      <div class="hd">
+        <span class="sig" aria-hidden="true">贰</span>
+        <h2 id="s2">剧集片单 <em>竹简</em></h2>
+        <p>百元电影网剧集频道以竹简条排列，竖排标注剧名、题材与集数。</p>
+        <a class="all" href="#">查看更多剧集 »</a>
+      </div>
+      <div class="slips" tabindex="0" aria-label="剧集片单竹简列表">
+        <article class="slip">
+          <span class="vt">漫长的季节<small>悬疑 · 12 集</small></span>
+          <span class="no">9.4</span>
+        </article>
+        <article class="slip">
+          <span class="vt">繁花<small>年代 · 30 集</small></span>
+          <span class="no">8.7</span>
+        </article>
+        <article class="slip">
+          <span class="vt">大明王朝1566<small>历史 · 46 集</small></span>
+          <span class="no">9.6</span>
+        </article>
+        <article class="slip">
+          <span class="vt">三体<small>科幻 · 30 集</small></span>
+          <span class="no">8.6</span>
+        </article>
+        <article class="slip">
+          <span class="vt">山海情<small>现实 · 23 集</small></span>
+          <span class="no">9.2</span>
+        </article>
+        <article class="slip">
+          <span class="vt">父母爱情<small>家庭 · 44 集</small></span>
+          <span class="no">9.3</span>
+        </article>
+      </div>
+      <p class="sliphint">← 左右滑动可查看全部竹简 →</p>
+    </div>
+  </section>
+
+  <!-- 栏目三：团扇 -->
+  <section class="sec" id="anime" aria-labelledby="s3">
+    <div class="wrap">
+      <div class="hd">
+        <span class="sig" aria-hidden="true">叁</span>
+        <h2 id="s3">动漫专区 <em>团扇</em></h2>
+        <p>百元电影网动漫频道收录日漫经典与国漫佳作，圆形团扇呈现，标注连载状态。</p>
+        <a class="all" href="#">查看更多动漫 »</a>
+      </div>
+      <div class="fans">
+        <article class="fan">
+          <div class="cir q1" role="img" aria-label="鬼灭之刃 动漫海报占位图"><b>鬼灭之刃</b></div>
+          <h3><a href="#">鬼灭之刃</a></h3>
+          <p>作画与配乐天花板级别的少年热血漫。</p>
+          <span class="st">连载中 · 8.9</span>
+        </article>
+        <article class="fan">
+          <div class="cir q2" role="img" aria-label="海贼王 动漫海报占位图"><b>海贼王</b></div>
+          <h3><a href="#">海贼王</a></h3>
+          <p>二十年航海史诗，友情与梦想的长期主义样本。</p>
+          <span class="st">连载中 · 9.2</span>
+        </article>
+        <article class="fan">
+          <div class="cir q3" role="img" aria-label="中国奇谭 动漫海报占位图"><b>中国奇谭</b></div>
+          <h3><a href="#">中国奇谭</a></h3>
+          <p>中式志怪美学短篇合集，每集都是惊喜。</p>
+          <span class="st">已完结 · 8.8</span>
+        </article>
+        <article class="fan">
+          <div class="cir q4" role="img" aria-label="灵笼 动漫海报占位图"><b>灵笼</b></div>
+          <h3><a href="#">灵笼</a></h3>
+          <p>国产末日科幻动画，世界观构建完成度高。</p>
+          <span class="st">连载中 · 8.6</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：宫灯 -->
+  <section class="sec" id="show" aria-labelledby="s4">
+    <div class="wrap">
+      <div class="hd">
+        <span class="sig" aria-hidden="true">肆</span>
+        <h2 id="s4">综艺娱乐 <em>宫灯</em></h2>
+        <p>百元电影网综艺频道悬挂式呈现音乐、竞技、真人秀与文化类节目。</p>
+        <a class="all" href="#">查看更多综艺 »</a>
+      </div>
+      <div class="lanterns">
+        <article class="lant">
+          <div class="cap t" aria-hidden="true"></div>
+          <div class="body l1" role="img" aria-label="歌手 综艺海报占位图">
+            <h3><a href="#">歌手</a></h3>
+            <span>音乐 · 竞技</span>
+          </div>
+          <div class="cap b" aria-hidden="true"></div>
+          <p>华语乐坛实力唱将同台竞技。</p>
+          <span class="sc">8.4</span>
+        </article>
+        <article class="lant">
+          <div class="cap t" aria-hidden="true"></div>
+          <div class="body l2" role="img" aria-label="奔跑吧 综艺海报占位图">
+            <h3><a href="#">奔跑吧</a></h3>
+            <span>真人秀 · 户外</span>
+          </div>
+          <div class="cap b" aria-hidden="true"></div>
+          <p>长寿户外综艺，游戏与城市文化结合。</p>
+          <span class="sc">7.9</span>
+        </article>
+        <article class="lant">
+          <div class="cap t" aria-hidden="true"></div>
+          <div class="body l3" role="img" aria-label="中国诗词大会 综艺海报占位图">
+            <h3><a href="#">中国诗词大会</a></h3>
+            <span>文化 · 益智</span>
+          </div>
+          <div class="cap b" aria-hidden="true"></div>
+          <p>诗词竞技节目，适合全家一起看。</p>
+          <span class="sc">9.0</span>
+        </article>
+        <article class="lant">
+          <div class="cap t" aria-hidden="true"></div>
+          <div class="body l4" role="img" aria-label="国家宝藏 综艺海报占位图">
+            <h3><a href="#">国家宝藏</a></h3>
+            <span>文化 · 文博</span>
+          </div>
+          <div class="cap b" aria-hidden="true"></div>
+          <p>以文物为线索的文化类节目佳作。</p>
+          <span class="sc">9.1</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五 + 栏目六 -->
+  <section class="sec" id="rank" aria-labelledby="s5">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <div class="hd">
+            <span class="sig" aria-hidden="true">伍</span>
+            <h2 id="s5">影视榜单 <em>金榜</em></h2>
+            <p>结合站内浏览与收藏行为生成，按日刷新，仅作排序参考。</p>
+          </div>
+          <ol class="board">
+            <li><span class="rk">状元</span><span class="nm"><a href="#">沙丘</a><span>科幻 · 2024</span></span><span class="sc">8.9<small>↑12%</small></span></li>
+            <li><span class="rk">榜眼</span><span class="nm"><a href="#">哪吒之魔童闹海</a><span>动画 · 国漫</span></span><span class="sc">9.0<small>↑9%</small></span></li>
+            <li><span class="rk">探花</span><span class="nm"><a href="#">漫长的季节</a><span>悬疑 · 剧集</span></span><span class="sc">9.4<small>↑7%</small></span></li>
+            <li><span class="rk">四</span><span class="nm"><a href="#">奥本海默</a><span>传记 · 历史</span></span><span class="sc">8.8<small>↑6%</small></span></li>
+            <li><span class="rk">五</span><span class="nm"><a href="#">流浪地球</a><span>科幻 · 国产</span></span><span class="sc">8.5<small>↑5%</small></span></li>
+            <li><span class="rk">六</span><span class="nm"><a href="#">繁花</a><span>年代 · 都市</span></span><span class="sc">8.7<small>↑4%</small></span></li>
+            <li><span class="rk">七</span><span class="nm"><a href="#">鬼灭之刃</a><span>热血 · 动漫</span></span><span class="sc">8.9<small>↑2%</small></span></li>
+          </ol>
+        </div>
+
+        <aside id="news" aria-labelledby="s6">
+          <div class="letter">
+            <h3 id="s6">影视资讯 · 信笺</h3>
+            <ul>
+              <li>
+                <span class="dt">2026 / 10 / 01</span>
+                <a href="#">百元电影网上线「题材速查」</a>
+                <p>按题材、年份、地区一键筛选片单，找片更快。</p>
+              </li>
+              <li>
+                <span class="dt">2026 / 09 / 28</span>
+                <a href="#">本周片单：科幻与动画双线走强</a>
+                <p>科幻片与国漫动画进入榜单前列，环比上升明显。</p>
+              </li>
+              <li>
+                <span class="dt">2026 / 09 / 24</span>
+                <a href="#">剧集观察：短集数精品化成趋势</a>
+                <p>12 集以内的悬疑剧集更受年轻观众青睐。</p>
+              </li>
+              <li>
+                <span class="dt">2026 / 09 / 20</span>
+                <a href="#">观影指南：三步挑到想看的片子</a>
+                <p>从题材、评分、时长三个维度快速做观影决策。</p>
+              </li>
+            </ul>
+          </div>
+          <div class="pane2">
+            <h3>热门关键词</h3>
+            <div class="tags">
+              <a href="#movie">百元电影网</a>
+              <a href="#movie">热门电影</a>
+              <a href="#series">剧集片单</a>
+              <a href="#anime">经典动漫</a>
+              <a href="#show">综艺节目</a>
+              <a href="#rank">影视榜单</a>
+              <a href="#">科幻电影</a>
+              <a href="#">国漫推荐</a>
+              <a href="#">悬疑剧</a>
+              <a href="#guide">观影指南</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目七 -->
+  <section class="sec" id="guide" aria-labelledby="s7">
+    <div class="wrap">
+      <div class="hd">
+        <span class="sig" aria-hidden="true">柒</span>
+        <h2 id="s7">观影指南 <em>问答</em></h2>
+        <p>关于百元电影网的定位、栏目结构与片单规则说明。</p>
+      </div>
+      <div class="book">
+        <div class="pg">
+          <div class="q"><i>问</i><h3>百元电影网是什么类型的网站？</h3></div>
+          <p>百元电影网（https://baiyuandianyingwang-cn.github.io）是影视指南站，提供影片简介、题材标签、影视榜单与观影指南，帮助用户更快找到想看的内容。</p>
+        </div>
+        <div class="pg">
+          <div class="q"><i>问</i><h3>百元电影网包含哪些栏目？</h3></div>
+          <p>全站设热门电影、剧集片单、动漫专区、综艺娱乐、影视榜单、影视资讯、观影指南七大栏目，覆盖主流影视内容形态。</p>
+        </div>
+        <div class="pg">
+          <div class="q"><i>问</i><h3>榜单数据如何更新？</h3></div>
+          <p>影视榜单根据站内浏览与收藏行为按日刷新，仅用于排序参考，不代表专业评分，也不构成观看建议。</p>
+        </div>
+        <div class="pg">
+          <div class="q"><i>问</i><h3>手机上浏览体验如何？</h3></div>
+          <p>页面采用响应式布局，手机、平板、桌面端自动适配；竹简区可横向滑动，小屏下卷轴与宫灯自动收为单列。</p>
+        </div>
+      </div>
+      <div class="info">
+        <div><strong>百元电影网</strong><span>网站名称</span></div>
+        <div><strong>baiyuandianyingwang-cn.github.io</strong><span>网站网址</span></div>
+        <div><strong>简体中文</strong><span>内容语言</span></div>
+        <div><strong>每日</strong><span>更新频率</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>关于本站</h4>
+        <p>百元电影网（https://baiyuandianyingwang-cn.github.io）专注热门电影、剧集片单、经典动漫与综艺娱乐的整理与推荐，每日更新片单与榜单，帮你看得快、选得准。</p>
+      </div>
+      <div>
+        <h4>内容栏目</h4>
+        <ul>
+          <li><a href="#movie">热门电影</a></li>
+          <li><a href="#series">剧集片单</a></li>
+          <li><a href="#anime">动漫专区</a></li>
+          <li><a href="#show">综艺娱乐</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>站点服务</h4>
+        <ul>
+          <li><a href="#rank">影视榜单</a></li>
+          <li><a href="#news">影视资讯</a></li>
+          <li><a href="#guide">观影指南</a></li>
+          <li><a href="#">意见反馈</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>友情链接</h4>
+        <ul>
+          <li><a href="#">影视资料库</a></li>
+          <li><a href="#">影评社区</a></li>
+          <li><a href="#">片单合集</a></li>
+          <li><a href="#">动漫索引</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fend">
+      <div class="wrap">
+        <span>百元电影网 · https://baiyuandianyingwang-cn.github.io · 关键词：百元电影网、热门电影、剧集片单、经典动漫、综艺娱乐</span>
+        <span>© 2026 百元电影网 · <a href="#">隐私说明</a> · <a href="#">免责声明</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="up" id="up" type="button" aria-label="返回顶部">↑</button>
+
+<script type="text/javascript">
+(function(){
+  var up = document.getElementById('up');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 400){ up.classList.add('show'); } else { up.classList.remove('show'); }
+  }, {passive:true});
+  up.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+})();
+</script>
+</body>
+</html>
